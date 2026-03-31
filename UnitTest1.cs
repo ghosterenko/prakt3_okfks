@@ -44,7 +44,7 @@ namespace pr3_konkov
             
         }
         [Fact]
-        public void CheckPrnsionerTicketWithDiscount()
+        public void CheckPrnsionerTicket()
         {
             TicketPriceCalculator calc = new TicketPriceCalculator();
             TicketRequest request = new TicketRequest();
@@ -65,7 +65,7 @@ namespace pr3_konkov
             request.IsStudent = false;
             request.IsVip = false;
             request.Day = DayOfWeek.Monday;
-            request.SessionTime = TimeSpan.FromHours(15);
+            request.SessionTime = TimeSpan.FromHours(11);
             decimal result = 255;
             Assert.Equal(result, calc.CalculatePrice(request));
         }
